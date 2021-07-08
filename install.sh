@@ -32,7 +32,7 @@ if [ -z "$1" ]; then
 fi
 
 mkdir -p "$PREFIX"/bin
-cp -R bin/* "$PREFIX"/bin/
+cp -R $PWD/bin/* "$PREFIX"/bin/
 
 
 echo "Installed bash_shell_mock to $PREFIX/bin/shellmock"
