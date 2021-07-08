@@ -22,7 +22,7 @@
 
 set -e
 
-
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 PREFIX="$1"
 if [ -z "$1" ]; then
   { echo "usage: $0 <prefix>"
@@ -32,7 +32,7 @@ if [ -z "$1" ]; then
 fi
 
 mkdir -p "$PREFIX"/bin
-cp -R $PWD/bin/* "$PREFIX"/bin/
+cp -R $DIR/bin/* "$PREFIX"/bin/
 
 
 echo "Installed bash_shell_mock to $PREFIX/bin/shellmock"
